@@ -17,6 +17,15 @@ module.exports = function(app, passport, db) {
               })
             })
         });
+        app.get('/resources', function(req, res) {
+          db.collection('messages').find().toArray((err, result) => {
+            if (err) return console.log(err)
+            res.render('resources.ejs', {
+              user : req.user,
+              messages: result
+            })
+          })
+      });
     
         // LOGOUT ==============================
         app.get('/logout', function(req, res) {
@@ -104,7 +113,7 @@ module.exports = function(app, passport, db) {
             }),
             function(req, res) {
                 console.log("Need to do findOneAndUpdate with ectra fields ",req.body,req.user._id)
-                res.redirect("/profile")
+                 res.redirect("/profile")
             });
             
     

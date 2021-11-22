@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="lights.css">
+    <title>Why did a light on the dashboard appear?</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark py-3">
+        <section class="container-fluid">
+          <a class="navbar-brand" href="#">Clutch</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <section class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="/resources" class="nav-link">Must Have's</a>
+              </li>
+              <li class="nav-item">
+                <a href="/maintenance" class="nav-link">How To's</a>
+              </li>
+              <li class="nav-item">
+                <a href ="lights" class="nav-link">Why did a light on the dashboard appear?</a>
+              </li>
+              <li class="nav-item">
+                <a href ="/login" class="nav-link" >Login</a>
+              </li>
+            </ul>
+
+          </section>
+        </section>
+      </nav>
+      <div class ="bg-dark h-100">
+        <div class = "row">
+            <div class ="col-sm-8">
+
+              <div class="d-flex align-items-start">
+                  <div class=" mx-3 nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-warning-tab" data-bs-toggle="pill" data-bs-target="#v-pills-warning" type="button" role="tab" aria-controls="v-pills-warning" aria-selected="true">Warning Symbols</button>
+                    <button class="nav-link" id="v-pills-safety-tab" data-bs-toggle="pill" data-bs-target="#v-pills-safety" type="button" role="tab" aria-controls="v-pills-safety" aria-selected="false">Safety Symbols</button>
+                    <button class="nav-link" id="v-pills-lighting-tab" data-bs-toggle="pill" data-bs-target="#v-pills-lighting" type="button" role="tab" aria-controls="v-pills-lighting" aria-selected="false">Lighting Symbols</button>
+                    <!-- <button class="nav-link" id="v-pills-common-tab" data-bs-toggle="pill" data-bs-target="#v-pills-common" type="button" role="tab" aria-controls="v-pills-common" aria-selected="false">Common Symbols</button> -->
+                  </div>
+                  <div class="tab-content" id="v-pills-tabContent">
+                    <div class=" mx-5 tab-pane fade show active" id="v-pills-warning" role="tabpanel" aria-labelledby="v-pills-warning-tab">
+                        
+
+
+                  <section class="bg-light pt-5 pb-5 shadow-sm">
+                    <div class="container">
+                      <div class="row pt-5">
+                        <div class="col-12">
+                          <h3 class="text-uppercase border-bottom mb-4">Warning Lights</h3>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                          <div class="card">
+                            <img src="Engine-Temperature.jpeg" class="card-img-top" alt="Card Image">
+                            <div class="card-body d-flex flex-column">
+                              <h5 class="card-title">Engine Temperature Warning Light</h5>
+                              <p class="card-text mb-4">Indicator light means the engine temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks.</p>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                          <div class="card">
+                            <img src="battery-alert.jpeg" class="card-img-top" alt="Card Image">
+                            <div class="card-body d-flex flex-column">
+                              <h5 class="card-title">Battery Charge Warning Light</h5>
+                              <p class="card-text mb-4">Indicator light means that the car’s charging system is short of power or is not charging properly. It normally indicates a problem with the battery itself or the alternator.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                          <div class="card">
+                            <img src="oilPressure.jpeg" class="card-img-top" alt="Card Image">
+                            <div class="card-body d-flex flex-column">
+                              <h5 class="card-title">Oil Pressure Warning Light</h5>
+                              <p class="card-text mb-4">Indicator light means loss of oil pressure, meaning lubrication is low or lost completely. Immediately check the oil level and pressure.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                          <div class="card">
+                            <img src="brake-warning-light.png" class="card-img-top" alt="Card Image">
+                            <div class="card-body d-flex flex-column">
+                              <h5 class="card-title">Brake Warning Light</h5>
+                              <p class="card-text mb-4">Indicator light turns on when the handbrake is on. If it lit continuously, it means that hydraulic pressure has been lost in one side of the brake system or that the fluid level in the master cylinder is dangerously low (due to a leak somewhere in the brake system).</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+
+
+
+                    </div>
+                    <div class="mx-5 tab-pane fade" id="v-pills-safety" role="tabpanel" aria-labelledby="v-pills-safety-tab">
+
+                      <section class="bg-light pt-5 pb-5 shadow-sm">
+                        <div class="container">
+                          <div class="row pt-5">
+                            <div class="col-12">
+                              <h3 class="text-uppercase border-bottom mb-4">Safety Lights</h3>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="transmission.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Transmission Temperature Light</h5>
+                                  <p class="card-text mb-4">Indicator light means the engine temperature has exceeded normal limits. Check coolant level, fan operation, radiator cap, coolant leaks.</p>
+    
+                                </div>
+                              </div>
+                            </div>
+                            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="trac.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Tire Pressure Warning Light
+
+                                  </h5>
+                                  <p class="card-text mb-4">Indicator light means that the car’s charging system is short of power or is not charging properly. It normally indicates a problem with the battery itself or the alternator.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="tracOff.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Traction Control Off</h5>
+                                  <p class="card-text mb-4">Indicator light means that the vehicles TCS (traction control system) has been deactivated.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="wheel.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Steering Wheel Lock</h5>
+                                  <p class="card-text mb-4">Indicator light means your steering wheel is locked and can not be moved. To turn off the steering lock, insert the key into the ignition and turn it to at least the first position while turning the steering wheel in either direction.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="antilock.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Anti-lock Braking System(ABS)</h5>
+                                  <p class="card-text mb-4">Indicator light means there may be a malfunction in the ABS system. </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="engine.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Check Engine or Malfunction Indicator Light (MIL)</h5>
+                                  <p class="card-text mb-4">Indicator light turns on whenever the engine is turned on to check the bulb. If the light stays illuminated, the car’s diagnostic systems have detected a malfunction that needs to be investigated.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="seat.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Seat Belt Indicator</h5>
+                                  <p class="card-text mb-4">Indicator light means that a seat belt has not been secured for a passenger in the vehicle.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="reduced.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Reduced Power Warning</h5>
+                                  <p class="card-text mb-4">Indicator light means that the Engine Computer has limited engine power output.
+
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="icy.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Icy Road Warning Light</h5>
+                                  <p class="card-text mb-4">Indicator light turns on when the outside air starts to reach freezing temperatures, around 35°F or 3°C.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="master.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Master Warning Light</h5>
+                                  <p class="card-text mb-4">Indicator light usually accompanied by another warning light and indicates that one or more warning systems have been detected.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="airbag.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Air Bag Indicator</h5>
+                                  <p class="card-text mb-4">Indicator light turns on when the front airbag is switched off. If this lamp lights up or flashes there is a fault in the airbag or seatbelt system.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="oilChange.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Oil Change Reminder</h5>
+                                  <p class="card-text mb-4">Indicator light means that oil life has expired.</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            
+                          </div>
+                        </div>
+                      </section>
+
+
+
+                    </div>
+                    <div class="mx-5 tab-pane fade" id="v-pills-lighting" role="tabpanel" aria-labelledby="v-pills-lighting-tab">
+                      <section class="bg-light pt-5 pb-5 shadow-sm">
+                        <div class="container">
+                          <div class="row pt-5">
+                            <div class="col-12">
+                              <h3 class="text-uppercase border-bottom mb-4">Lighting Symbols</h3>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="lowBeam.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Low Beam Indicator Light</h5>
+                                  <p class="card-text mb-4">Indicator light means that the vehicles dipped beam is on.</p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="lampOut.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Lamp Out</h5>
+                                  <p class="card-text mb-4">Indicator light means that there is an exterior light on the vehicle that is not functioning properly.</p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <!--ADD CLASSES HERE d-flex align-items-stretch-->
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="highBeam.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">High Beam Light Indicator</h5>
+                                  <p class="card-text mb-4">Indicator light means your car’s high beam headlights are on, or if the high beam flash function is used. </p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                              <div class="card">
+                                <img src="autoHighBeam.jpeg" class="card-img-top" alt="Card Image">
+                                <div class="card-body d-flex flex-column">
+                                  <h5 class="card-title">Auto High Beam</h5>
+                                  <p class="card-text mb-4">Indicator light means the Auto High Beam system has switched on high beam headlights.</p>
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section></div>
+                    <!-- <div class="mx-5 tab-pane fade" id="v-pills-common" role="tabpanel" aria-labelledby="v-pills-common-tab">
+                    
+                    </div> -->
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+</body>
+</html>

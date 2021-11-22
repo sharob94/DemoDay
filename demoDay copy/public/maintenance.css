@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+h1{
+    background-color:rgb(39,42,45);
+    color:rgb(202,83,143);
+    margin-bottom:none;
+}
+.navbar-brand{
+    color:rgb(202,83,143);
+}
+.nav-item{
+    color:rgb(202,83,143);
+}
+
+.topSection{
+background-color: rgb(39,42,45);
+color: rgb(202,83,143);
+}
+
+h2,h3{
+    color:rgb(202,83,143);
+}
+
+p,span{
+    color:white;
+}
+
+li{
+    color:white;
+}

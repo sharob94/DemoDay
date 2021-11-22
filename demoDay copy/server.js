@@ -1,5 +1,5 @@
 // server.js
-
+console.log('goodbye')
 // set up ======================================================================
 // get all the tools we need
 let express  = require('express');

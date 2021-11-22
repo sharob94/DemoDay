@@ -1,5 +1,6 @@
 body{
     background-color: black;
+    color:black;
 }
 h1{
     background-color:rgb(39,42,45);
@@ -17,3 +18,59 @@ h1{
 background-color: rgb(39,42,45);
 color: rgb(202,83,143);
 }
+
+h3{
+    color: rgb(202,83,143);
+    text-align:center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 2em;
+
+}
+
+p{
+    color:rgb(202,83,143);
+    text-align: left;
+    font-size: 2em;
+    list-style: none;
+}
+ul.topics{
+    list-style: none;
+}
+
+.description{
+    font-size:  1.5em;
+    font-weight: bold;
+
+
+}
+
+button{
+    
+    background-color: rgb(202,83,143);
+    color:white;
+    border-radius:2px ;
+    margin-top: 2px;
+   
+}
+
+#topic{
+    margin-bottom: 10px;
+}
+
+h2{
+    color:rgb(202,83,143);
+}
+
+.textArea{
+    
+    width:45%;
+    margin-left: 2%;
+    
+
+}
+.hidden{
+   
+    width:45%;
+}
+

@@ -1,4 +1,4 @@
-{
+{"start": "node-index.ejs",
   "name": "demo-day",
   "main": "server.js",
   "dependencies": {
@@ -23,5 +23,6 @@
     "passport-google-oauth": "~1.0.0",
     "passport-local": "~1.0.0",
     "passport-twitter": "^0.1.5"
+    
   }
 }

@@ -43,23 +43,3 @@ Array.from(trash).forEach(function(element) {
         })
       });
 });
-
-function edmonds(){
-  const url = ('https://api.edmunds.com/api/media/v2/{make}/{model}/{year}/photos?api_key={api_key}&fmt=json')
-
-
-  .then(data => { 
-    console.log(data) 
-    if(data.code == 400){
-        let errorMessage = 'ERROR  ' + data.msg
-        alert(errorMessage)
-      
-    }else if(datafromNasa.media_type == 'video'){
-           pic.classList.add('hide')
-          video.src = datafromNasa.url
-          information.innerText = datafromNasa.explanation
-          title.innerText = datafromNasa.title
-          video.classList.remove('hide')
-    }
-  }
-}

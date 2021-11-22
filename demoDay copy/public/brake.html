@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<script type="text/javascript">
+	
+	
+	function getCookie(name) {
+    var nameEQ = name + '=';
+    var ca = document.cookie.split(';');
+    
+    for (var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') { 
+            c = c.substring(1,c.length);
+        }
+        
+        if (c.indexOf(nameEQ) == 0) {
+            return decodeURIComponent(c.substring(nameEQ.length,c.length));
+        }
+    }
+    return null;
+}
+
+ 
+	 
+  function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+
+var eventid = makeid(40);
+var leadid = makeid(39);
+var locationid = makeid(38);
+ 
+
+
+
+
+
+var fbc = getCookie('_fbc');
+var fbp = getCookie('_fbp');
+var fb_ip = '2001:569:fee8:a300:50bf:bf3c:a94a:e4c';
+var fb_ua ='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36 Edg/96.0.1054.29';
+//var eventid = '994630f85af9671535991945af208182d99075340d89bcb46381a6381f7ebd3dfb63f020';
+//var leadid = 'bbc96aedba1374b23ede334faf843e27335ac529fcf75eaede303a69a8d4aa1acfae';
+//var locationid = '11982c57b532fc457c71fc5a626097f284cef9eff4a15b77467ac90c9f6d4a78';
+ console.log(eventid);
+params = {
+	"data": [
+		{
+  "event_name": "Lead",
+  "event_time": '1637531639',
+  "event_id": leadid,
+  "user_data": {
+    "client_ip_address": fb_ip,
+    "client_user_agent": fb_ua,
+    "fbc": fbc,
+    "fbp": fbp
+  },
+  
+  "event_source_url": "https://www.powerstop.com/brake-warning-light-dashboard/",
+  "action_source": "website"
+}
+
+]//,
+   //"test_event_code":"TEST96165"
+};
+params2 = {
+	"data": [
+		{
+  "event_name": "FindLocation",
+   "event_time": '1637531639',
+  "event_id": locationid,
+  "user_data": {
+    "client_ip_address": fb_ip,
+    "client_user_agent": fb_ua,
+     "fbc": fbc,
+    "fbp": fbp
+  },
+  
+  "event_source_url": "https://www.powerstop.com/brake-warning-light-dashboard/",
+  "action_source": "website"
+}
+
+]
+};
+params3 = {
+	"data": [
+		{
+  "event_name": "PageView",
+   "event_id": eventid,
+  "event_time": '1637531639',
+  "user_data": {
+    "client_ip_address": fb_ip,
+    "client_user_agent": fb_ua,
+     "fbc": fbc,
+    "fbp": fbp
+  },
+  
+  "event_source_url": "https://www.powerstop.com/brake-warning-light-dashboard/",
+  "action_source": "website"
+}
+
+]//,
+  //"test_event_code":"TEST90126"
+};
+
+
+
+</script>
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KZC6KN');</script>
+<!-- End Google Tag Manager -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1, user-scalable=no, user-scalable=0">
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<link href="https://www.powerstop.com/wp-content/themes/powerstop/vendor/bootstrap/css/bootstrap.min.css?ver=2" rel="stylesheet">
+        <script type='text/javascript' src='/wp-content/themes/powerstop/vendor/jquery/jquery.min.js'></script>
+       
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.powerstop.com/wp-content/themes/powerstop/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.powerstop.com/wp-content/themes/powerstop/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.powerstop.com/wp-content/themes/powerstop/assets/icons/favicon-16x16.png">
+<link rel="mask-icon" href="https://www.powerstop.com/wp-content/themes/powerstop/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="stylesheet" href="https://use.typekit.net/pww3ttd.css">
+<link rel="stylesheet" href="/wp-content/themes/powerstop/vendor/fontawesome/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v17.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>What is a Brake Warning Light &amp; How To Fix It - PowerStop Brakes</title>
+	<meta name="description" content="Have a brake warning light showing up on your dashboard and don&#039;t know what to do? Here&#039;s a helpful guide to diagnose what is wrong and how to fix it." />
+	<link rel="canonical" href="https://www.powerstop.com/brake-warning-light-dashboard/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="What is a Brake Warning Light &amp; How To Fix It - PowerStop Brakes" />
+	<meta property="og:description" content="Have a brake warning light showing up on your dashboard and don&#039;t know what to do? Here&#039;s a helpful guide to diagnose what is wrong and how to fix it." />
+	<meta property="og:url" content="https://www.powerstop.com/brake-warning-light-dashboard/" />
+	<meta property="og:site_name" content="PowerStop Brakes" />
+	<meta property="article:published_time" content="2019-06-28T00:00:00+00:00" />
+	<meta property="article:modified_time" content="2021-05-06T16:19:48+00:00" />
+	<meta property="og:image" content="https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="720" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="powerstoptsg" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.powerstop.com/#website","url":"https://www.powerstop.com/","name":"PowerStop Brakes","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.powerstop.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.powerstop.com/brake-warning-light-dashboard/#primaryimage","inLanguage":"en-US","url":"https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover.png","contentUrl":"https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover.png","width":1200,"height":720,"caption":"Brake warning light"},{"@type":"WebPage","@id":"https://www.powerstop.com/brake-warning-light-dashboard/#webpage","url":"https://www.powerstop.com/brake-warning-light-dashboard/","name":"What is a Brake Warning Light & How To Fix It - PowerStop Brakes","isPartOf":{"@id":"https://www.powerstop.com/#website"},"primaryImageOfPage":{"@id":"https://www.powerstop.com/brake-warning-light-dashboard/#primaryimage"},"datePublished":"2019-06-28T00:00:00+00:00","dateModified":"2021-05-06T16:19:48+00:00","author":{"@id":"https://www.powerstop.com/#/schema/person/364eaa6a755418bdc3d0d16be3fdec19"},"description":"Have a brake warning light showing up on your dashboard and don't know what to do? Here's a helpful guide to diagnose what is wrong and how to fix it.","breadcrumb":{"@id":"https://www.powerstop.com/brake-warning-light-dashboard/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.powerstop.com/brake-warning-light-dashboard/"]}]},{"@type":"BreadcrumbList","@id":"https://www.powerstop.com/brake-warning-light-dashboard/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.powerstop.com/"},{"@type":"ListItem","position":2,"name":"What is a Brake Warning Light &#038; How To Fix It"}]},{"@type":"Person","@id":"https://www.powerstop.com/#/schema/person/364eaa6a755418bdc3d0d16be3fdec19","name":"powerstoptsg","image":{"@type":"ImageObject","@id":"https://www.powerstop.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/8a664da3586bda76653123975fa2e09e?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/8a664da3586bda76653123975fa2e09e?s=96&d=mm&r=g","caption":"powerstoptsg"},"sameAs":["https://www.powerstop.com"],"url":"https://www.powerstop.com/author/powerstoptsg/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="PowerStop Brakes &raquo; Feed" href="https://www.powerstop.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="PowerStop Brakes &raquo; Comments Feed" href="https://www.powerstop.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="PowerStop Brakes &raquo; What is a Brake Warning Light &#038; How To Fix It Comments Feed" href="https://www.powerstop.com/brake-warning-light-dashboard/feed/" />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.powerstop.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='powerstop-style-css'  href='https://www.powerstop.com/wp-content/themes/powerstop/style.css?ver=7.19' type='text/css' media='all' />
+<link rel='stylesheet' id='powerstop-style2-css'  href='https://www.powerstop.com/wp-content/themes/powerstop/style2.css?ver=7.20' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='https://www.powerstop.com/wp-content/themes/powerstop/vendor/slick/slick.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css'  href='https://www.powerstop.com/wp-content/themes/powerstop/vendor/slick/slick-theme.css?ver=1' type='text/css' media='all' />
+<link rel="https://api.w.org/" href="https://www.powerstop.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.powerstop.com/wp-json/wp/v2/posts/29121" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.powerstop.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.powerstop.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='https://www.powerstop.com/?p=29121' />
+<link rel="alternate" type="application/json+oembed" href="https://www.powerstop.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.powerstop.com%2Fbrake-warning-light-dashboard%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.powerstop.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.powerstop.com%2Fbrake-warning-light-dashboard%2F&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	
+	
+
+        <script type="text/javascript">
+                        var siteCountry = 'CA';
+            
+            var siteLanguage = 'US';
+            var systemDropDownTime = '1636744959';
+            var systemAliasTime = '1636744959';
+
+            function showSliderImage(el) {
+                var sliderDiv = el.parentElement;
+                $(sliderDiv).show();
+            }
+        </script>
+        </head>
+
+<body class="post-template-default single single-post postid-29121 single-format-standard">
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZC6KN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="overlay"></div>
+       <div class="pro-hub-bar" id="pro_hub_bar" style="display: none;">
+       <div class="row">
+         <div class="col-6"><div class="pro-hub-title">Viewing PowerStop Pro Site</div></div>
+         <div class="col-6"><div class="pro-hub-switcher"><a href="javascript:" onclick="setConsumerType('consumer');">Switch to Consumer Site</a></div></div>
+       </div>
+     </div>
+
+              <div id="part-number-search" class="part-number-search" style="display: none;">
+          <div class="row">
+            <div class="col-6 title">PART# LOOKUP</div>
+            <div class="col-6 closer"><image onclick="closePartNumberSearch();" src="/wp-content/themes/powerstop/asset/image/close.png" /></div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input class="bar_finder_input data-hj-whitelist" data-hj-whitelist id="input-vehicle-finder-bar" type="text" onmouseover="$(this).focus();" onchange="liveVehicleSearch(this.value, {'source' : 'bar'});" onkeyup="liveVehicleSearch(this.value, {'source' : 'bar'});" placeholder="Enter Powerstop Part #" autocomplete="off" />
+              <div class="hidden-results-bar">
+                <div class="vehicle-results" id="vehicle-results-bar">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <div class="infobar py-3">
+   <div class="container">
+  <div class="row align-items-center">
+          <div class="col infobar-right align-right">
+      <div class="intersite-links">
+        <ul>
+            <li class="phswitch"><a href="/where-to-buy/">Where to buy</a></li>
+            <li><a href="/find-local-installer/">Find an Installer</a></li>
+            
+            <li><a href="javascript:" class="partNumberSearchLink" onclick="partNumberSearch();">Part# Lookup</a></li>
+            <li><a class="prohub_button" href="/pro-hub/"><span class="phswitch">Switch to </span>Pro Hub</a></li>
+          <li><a href="/es/">En Español</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+   </div></div>
+ 
+		<header id="masthead" >
+		 <div class="container">
+	     
+ 		
+ 		<nav class="navbar navbar-expand-md navbar-light static-top px-0" style="justify-content: space-between;">
+   
+      <a class="navbar-brand" id="homeLink" href="https://www.powerstop.com"><img src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/powerstop.svg" width="409" height="32" alt="PowerStop Brakes" /></a>
+      <button onclick="prepareNav();" class="navbar-toggler mobile-view" id="navbar-toggler-top" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+	                 <ul class="navbar-nav mr-auto">
+          <li class="nav-menu-head mobile-view">
+            <img src="/asset/image/general/finder.png" onclick="openBreakFinder()" style="cursor: pointer;" />
+            <button onclick="prepareNav();" class="navbar-toggler mobile-view" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </li>
+          
+          <li class="nav-item dropdown" onclick="openProducts(event);" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span id="punderline">Products</span></a>
+            <img src="/wp-content/themes/powerstop/assets/icons/round-plus.png" id="menu-closed" style="display: none;" class="menu-circle" />
+            <img src="/wp-content/themes/powerstop/assets/icons/round-minus.png" id="menu-open" style="display: none;" class="menu-circle" />
+    <div class="dropdown-menu" id="product-dropdown">
+      <a class="dropdown-item product_cat kit_link" href="/product-type/brake-kits/">Brake Kits</a>
+      <a class="dropdown-item product_cat kit_link" href="/product-type/caliper-kits/">Brake Kits with Calipers</a>
+      <a class="dropdown-item product_cat kit_link" href="/product-type/big-brake-kits/">Big Brake Kits</a>
+      <a class="dropdown-item product_cat" href="/product-type/brake-pads/">Brake Pads</a>
+      <a class="dropdown-item product_cat" href="/product-type/brake-shoes/">Brake Shoes</a>
+      <a class="dropdown-item product_cat" href="/product-type/brake-rotors/">Brake Rotors & Drums</a>
+      <a class="dropdown-item product_cat" href="/product-type/calipers/">Brake Calipers</a>
+      <a class="dropdown-item product_cat" href="/product-type/brake-hoses/">Brake Hoses</a>
+       <a class="dropdown-item product_cat" href="/product-type/pad-wear-sensors/">Pad Wear Sensors</a>
+       
+            <div class="dropdown-divider"></div>
+       <a class="dropdown-item product_cat" href="/products/">All PowerStop Products</a>
+
+     
+         </div>
+  </li>
+          <li class="nav-item" onclick="fetchUrl('/support-installs/');">
+            <a class="nav-link" href="/support-installs/">Support & Installs</a>
+            <img src="/wp-content/themes/powerstop/assets/icons/arrow-right.png" style="display: none;" class="menu-arrow mobile-view" />
+          </li>
+          <li class="nav-item" onclick="fetchUrl('/category/media-events/');">
+            <a class="nav-link" href="/category/media-events/">Videos & Events</a>
+            <img src="/wp-content/themes/powerstop/assets/icons/arrow-right.png" style="display: none;" class="menu-arrow mobile-view" />
+          </li>
+          
+          <li class="nav-item mobile-view phswitch" onclick="fetchUrl('/where-to-buy/');" style="display: none;">
+            <a class="nav-link" href="/where-to-buy/">Where to Buy</a>
+            <img src="/wp-content/themes/powerstop/assets/icons/arrow-right.png" style="display: none;" class="menu-arrow mobile-view" />
+          </li>
+
+          <li class="nav-item mobile-view" onclick="fetchUrl('/find-local-installer/');" style="display: none;">
+            <a class="nav-link" href="/find-local-installer/">Find an Installer</a>
+            <img src="/wp-content/themes/powerstop/assets/icons/arrow-right.png" style="display: none;" class="menu-arrow mobile-view" />
+          </li>
+
+          <li class="nav-item mobile-view kit_link" onclick="fetchUrl('/pro-hub/');" style="display: none;">
+            <a class="nav-link" href="/pro-hub/"><span class="phswitch">Switch to </span>Pro Hub</a>
+            <img src="/wp-content/themes/powerstop/assets/icons/arrow-right.png" style="display: none;" class="menu-arrow mobile-view" />
+          </li>
+
+          <li class="nav-item nav-item-last mobile-view partSearchMobileNav" onclick="partNumberSearch();" style="display: none;">
+            <a class="nav-link partNumberSearchLink" href="javascript:" onclick="partNumberSearch();">Search By Part#</a>
+            <img src="/wp-content/themes/powerstop/assets/icons/arrow-right.png" style="display: none;" class="menu-arrow mobile-view" />
+          </li>
+
+        </ul>
+
+        <div class="mobile-view addl-links" style="display: none;" >
+          <p><a href="/es/">En Español</a></p>
+          <p><a href="javascript:" onclick="setConsumerType('consumer');" class="consumer-link">Switch to Consumer Site</a></p>
+         
+        </div>
+      </div>
+   <div class="dimmer"></div>
+  </nav>
+   
+    </div>
+</header> 
+
+  </div>
+
+
+<div id="brake_finder_bar" style="display: none;">
+  <div class="container">
+      <div class="row desktop_margin">
+         
+        <div class="finder_title col-2" data-displayed="true" id="finder_title">Brake Finder</div>
+
+        <div class="search_input_wrapper col-12 col-md-9" id="search_input_wrapper">
+          <div id="match_vehicle_start">
+              <div id="match_your_vehicle" data-displayed="true" onclick="goBackToSlide(false, 'drawer-vehicle-selection');">Match Your Vehicle</div>
+          </div>
+          <div id="matching_vehicle_in_progress" data-displayed="false">Matching your vehicle</div>
+        </div>
+
+        <div id="selected_vehicle_wrapper" class="brakefinder-vr col-12 col-md-6 col-lg-4" style="display: none;">
+          <div id="finder_bar_selected_vehicle"></div>
+        </div>
+
+        <div id="finder_bar_change_vehicle" data-displayed="false" class="col-2">
+          <a href="javascript:" onclick="changeVehicle(event);">Change Vehicle</a>
+        </div>
+
+        <div class="col-4" id="next-step-container">
+          <div id="finder_next_steps"></div>
+          <div id="finder_matching"></div>
+        </div>
+      </div>
+  </div>
+  <!-- <div class="container d-block" id="vehicle-drawer-container"> -->
+<div id="vehicle-drawer-container" >
+  <div id="drawer-vehicle-selection">
+      <div class="drawer-container">
+                  <div class="home_finder_title">
+          <img class="mobile-view" src="/asset/image/general/close.png" onclick="closeVehicleSelectionDrawer();" />
+          <span>Find The Right Brakes for</span> <span class="red">Your Vehicle</span>
+        </div>
+        <div class="select-dd-wrap">
+          <div class="select-dd">
+            <select id="year" class="year" name=""><option value="">VEHICLE YEAR</option></select>
+          </div>
+          <div class="select-dd">
+            <select id="make" class="make" name=""><option value="0">MAKE</option></select>
+          </div>
+          <div class="select-dd">
+            <select id="model" class="model" name=""><option value="">MODEL</option></select>
+          </div>
+          <div class="select-dd">
+            <select id="submodel" class="submodel" name=""><option value="">SUBMODEL</option></select>
+          </div>
+          <div class="select-dd" id="position_dropdown">
+            <select id="position" class="position" name=""><option value="">BRAKE POSITION</option></select>
+          </div>
+        </div>
+
+        <p class="vehicle-drawer-back vehicle-reset"><a class="black-link" onclick="resetAllDropDowns();" href="javascript:">Start Over</a></p>
+
+      </div>
+  </div>
+  <div id="drawer-bbk-selection">
+      <div class="drawer-container">
+            <div class="row what-vehicle d-block">
+    <div class="col" style="position: relative;">
+      <p>How do you <span class="brand-red">use your <span id="vehicle-make-model-3"></span></span> ?</p>
+    </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col-12 wizardbbk-buttons">
+        <p id="bbk-question-1">Would you like to increase your caliper and rotor size for improved performance and look?</p>
+        <input class="btn btn-white-small" type="button" value="YES" onclick="setBBKSelection(this, 'yes');" />
+        <input class="btn btn-white-small" type="button" value="NO" onclick="setBBKSelection(this, 'no');" />
+      </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col">
+          <p class="vehicle-drawer-back"><a class="black-link" onclick="goBackToSlide(event, 'drawer-vehicle-selection');" href="#">Back</a></p>
+      </div>
+  </div>      </div>
+  </div>
+  <div id="drawer-usage1-selection">
+      <div class="drawer-container">
+            <div class="row what-vehicle d-block">
+    <div class="col" style="position: relative;">
+      <p>How do you use your <span class="brand-red"> <span id="vehicle-make-model"></span></span> ?</p>
+    </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col-12 wizard1-buttons">
+        <p id="usage-question-1"></p>
+        <input class="btn btn-white-small" type="button" value="YES" onclick="setAnswerOneSelection(this, 'yes');" />
+        <input class="btn btn-white-small" type="button" value="NO" onclick="setAnswerOneSelection(this, 'no');" />
+      </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col">
+          <!-- <input type="button" id="btn-set-wizard1" class="btn btn-black finder-button" value="NEXT" onclick="nextUseCaseQuestion();" disabled="disabled" /> -->
+          <p class="vehicle-drawer-back"><a class="black-link" onclick="goBackToSlide(event, 'drawer-vehicle-selection');" href="#">Back</a></p>
+      </div>
+  </div>      </div>
+  </div>
+  <div id="drawer-usage2-selection">
+      <div class="drawer-container">
+            <div class="row what-vehicle d-block">
+    <div class="col" style="position: relative;">
+      <p>How do you<br /><span class="brand-red">use your <span id="vehicle-make-model-2"></span></span> ?</p>
+    </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col-12 wizard2-buttons">
+        <p id="usage-question-2"></p>
+        <input class="btn btn-white-small" type="button" value="YES" onclick="setAnswerTwoSelection(this, 'yes');" />
+        <input class="btn btn-white-small" type="button" value="NO" onclick="setAnswerTwoSelection(this, 'no');" />
+      </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col">
+          <p class="vehicle-drawer-back"><a class="black-link" onclick="goBackToSlide(event, 'drawer-usage1-selection');" href="#">Back</a></p>
+      </div>
+  </div>      </div>
+  </div>
+  <div id="drawer-vehicle-details">
+      <div class="drawer-container">
+            <div class="row what-vehicle d-block">
+    <div class="col" style="position: relative;">
+      <p><span class="brand-red">Your Vehicle</span></p>
+    </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col-12 wizard2-buttons">
+        <h4 id="summary_make_model"></h4>
+        <ul id="summary_bullets"></ul>
+      </div>
+  </div>
+
+  <div class="row what-vehicle" id="next_step_mobile_container">
+    <div class="col">
+        <div id="finder_next_steps_mobile"></div>
+    </div>
+  </div>
+
+  <div class="row what-vehicle">
+      <div class="col">
+          <input id="button_recommended" type="button" id="btn-set-summary" class="btn btn-black finder-button" value="RECOMMENDED FOR YOU" onclick="goToResults(true);" />
+          <p class="vehicle-drawer-back"><a class="black-link" onclick="changeVehicle(event);" href="javascript:">Change Vehicle</a></p>
+      </div>
+  </div>      </div>
+  </div>
+ <div class="lds-dual-ring"></div>
+</div></div>
+
+	  
+<main id="main">
+ 
+   		<div id="breadcrumb" class="desktop-view">
+	<div class="container">
+	<a href="https://www.powerstop.com">Home</a> / <a href="https://www.powerstop.com/category/faqs/">FAQs</a>, 
+<a href="https://www.powerstop.com/category/how-tos/">How-Tos</a> 
+ / <span>What is a Brake Warning Light &#038; How To Fix It</span>		</div>
+</div>	
+ <div id="products_main">
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-3 sidebar ">
+           <div id="sidebar_menu" class="sidebar_menu desktop-view mt-0">
+<ul>
+	 
+ <li ><a href="https://www.powerstop.com/category/faqs/">FAQs (<span>37</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/how-tos/">How-Tos (<span>23</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/innovation-brake-technology/">Innovation &amp; Brake Technology (<span>7</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/news/">News (<span>39</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/press/">Press (<span>29</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/track-day/">Track Day (<span>18</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/videos-commercials/">Videos &amp; Commercials (<span>22</span>)</a></li>
+  
+ <li ><a href="https://www.powerstop.com/category/media-events/">Videos &amp; Events (<span>67</span>)</a></li>
+ 	 
+	 
+</ul>
+ </div>	       
+      </div>
+      
+      <div class="col-lg-9 content-right">
+      
+      
+	        <img width="1200" height="720" src="https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover.png" class="img-fluid mb-2 wp-post-image" alt="Brake warning light" loading="lazy" srcset="https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover.png 1200w, https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover-300x180.png 300w, https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover-768x461.png 768w, https://www.powerstop.com/wp-content/uploads/2019/07/real-brake-light-cover-1024x614.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" />                 <h4><a href="https://www.powerstop.com/wp-content/uploads/2019/06/brake-warning-light-cover-1.jpg"><br />
+</a>In this article, we will go over what a brake warning light looks like, how to inspect possible issues related to it, and the different options to fix it.</h4>
+<p>When a check engine light comes on it’s a scary sight. It can turn an otherwise great day into a stressful one in an instant. Unfortunately, there are other lights that can show up on the dashboard that are just as frightening. One of these examples is a brake warning light. Just like a check engine light, it will only get worse if you ignore it.</p>
+<p>While the time varies on how soon larger problems can occur, the point stands that driving with a possibly faulty brake system can put your wallet and your <strong><a href="https://www.powerstop.com/precious-cargo-commercial/">most precious cargo</a> </strong>at risk. Here’s a quick guide to help you diagnose the problem and resolve it quickly.</p>
+<p>&nbsp;</p>
+<h2>What Does a Brake Warning Light Look Like and What Does It Mean?</h2>
+<p>Some common brake lights that can show up on a dashboard include:</p>
+<p>&nbsp;</p>
+<h4 style="text-align: center;">This light is a warning that brake pads are getting too worn and should be replaced soon:</h4>
+<p><center><img loading="lazy" class="aligncenter wp-image-25913 size-thumbnail" src="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-warning.png" alt="" width="106" height="71"></center>&nbsp;</p>
+<h4 style="text-align: center;">If these lights go off and on repeated or when you turn, it can mean to check the brake fluid level in the master cylinder:</h4>
+<p><center><img loading="lazy" class="alignleft wp-image-25912 size-thumbnail" src="https://www.powerstop.com/wp-content/uploads/2019/07/Exclamation.png" alt="" width="106" height="71"></center><center><img loading="lazy" class="alignleft wp-image-25911 size-thumbnail" src="https://www.powerstop.com/wp-content/uploads/2019/07/BRAKE.png" alt="" width="106" height="71"></center></p>
+<h4 style="text-align: center;">This brake light indicates that there is an issue with your parking brake, or it is still engaged:</h4>
+<p><center><img loading="lazy" class="alignleft wp-image-25914 size-thumbnail" src="https://www.powerstop.com/wp-content/uploads/2019/07/Presentation1.png" alt="" width="106" height="71"></center>&nbsp;</p>
+<p>These lights indicate different possible issues within your braking system.&nbsp;All vehicles are different, which means the brake warning indicator could be different on your vehicle than these. Refer to your vehicle’s Owner’s Manual to be certain which light pertains to your specific vehicle.</p>
+<p><em>*Note: ABS Warning Lights can sometimes be related to the hydraulic brake system, but have to do specifically with your vehicle’s Anti-Lock Brake System, for more information on these warning indicators click <strong><a href="https://www.cars.com/articles/2014/02/why-is-the-abs-light-on/">HERE</a></strong> </em></p>
+<p>&nbsp;</p>
+<h2>When Did the Brake Warning Light Show Up?</h2>
+<p>If the brake warning light comes on and stays on when you start your vehicle, do not begin to drive it. Turn your car off and inspect the possible causes of the issue (we will get to those soon).</p>
+<p>If the brake warning light comes on while you are in traffic or driving, don’t panic. Your vehicle has more than one hydraulic braking system. So, while it may take a little longer to come to a complete stop than usual, safely pull over and have your vehicle towed to your home or to a trusted mechanic to inspect.</p>
+<p>Again, it is important that you do not continue driving and ignore the brake light, this can cause more damage to the braking system and be very dangerous.</p>
+<p><em>*Pro Tip: when you first turn on your vehicle, all the lights on the dashboard should illuminate. If you see one or more do not turn on, you may have a problem with the specific indicator.</em></p>
+<p>&nbsp;</p>
+<h2>Inspecting &amp; Fixing the Issue:</h2>
+<p>Now that we know what the light showing on the dashboard means, we can inspect certain parts of the brake system and if we find the problem, fix it!</p>
+<h3>1) Brake Fluid</h3>
+<p>Brake fluid is essential to brake performance. When you press the brake pedal, pressurized fluid in the brake hoses/brake lines force a piston in the calipers to apply pressure on the inner brake pads, squeezing the pads and brake rotor for you to slow down.</p>
+<p>To check it, first, find the master cylinder (also called brake fluid reservoir) (pictured below). It is usually white or yellow plastic and located on the driver’s side. Then, check the fluid level. There should be minimum and maximum markings on the side of the reservoir to show the optimal range of fluid. If you find the fluid is too low, add new brake fluid to the reservoir. However, you will need to flush your brake fluid before adding new fluid.</p>
+<p>Another thing to check is the brake pedal. Press down on the pedal with force. If it goes to the floor, there may be a leak or air in the brake system. If the pedal feels firm, that is a good thing.</p>
+<p>&nbsp;</p>
+<p><img loading="lazy" class="aligncenter wp-image-25921 size-full" src="https://www.powerstop.com/wp-content/uploads/2019/07/f3fbf56591a38b052ee95cb3ceb4b39130cde22212572239300468.jpg" alt="master cylinder brake fluid reservoir" width="640" height="480"></p>
+<p><em>For information on how to inspect and flush brake fluid, check out this handy link by AutoMD <strong><a href="https://www.automd.com/596/how-to-check-the-brake-fluid-level/">HERE</a></strong>.</em></p>
+<h3></h3>
+<h3></h3>
+<h3>2) Parking Brake</h3>
+<p>Depending on what type of parking brake your vehicle is equipped with, you may find that it could be still slightly engaged. If so, the parking brake specific warning light indicator will illuminate. To fix this issue, just release the parking brake all the way.</p>
+<h3>3) Brake Pads &amp; Sensors</h3>
+<p>Brake pads wear over time and use. When they wear too much, you should replace them. Here is an easy tool to demonstrate different thickness intervals of brake pads:</p>
+
+		<style type="text/css">
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 33%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style>
+		<div id='gallery-1' class='gallery galleryid-29121 gallery-columns-3 gallery-size-full'><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<img width="1200" height="720" src="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-2.png" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-2.png 1200w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-2-300x180.png 300w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-2-768x461.png 768w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-2-1024x614.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" />
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<img width="1200" height="720" src="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-3.png" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-3.png 1200w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-3-300x180.png 300w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-3-768x461.png 768w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool-3-1024x614.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" />
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<img width="1200" height="720" src="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool1.png" class="attachment-full size-full" alt="" loading="lazy" srcset="https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool1.png 1200w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool1-300x180.png 300w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool1-768x461.png 768w, https://www.powerstop.com/wp-content/uploads/2019/07/brake-pad-tool1-1024x614.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" />
+			</dt></dl><br style="clear: both" />
+		</div>
+
+<p>The &#8220;good&#8221; range would represent a new or unused brake pad. It is a recommended to replace the pads as the thickness of the pad wears down to ~4.5mm and below. A pad in the &#8220;replace now&#8221; range can have poor stopping power and begin to damage the rotor.</p>
+<p>&nbsp;</p>
+<p>Some vehicles’ brake pads use electronic sensor wires. They are a safety component that alerts you (through a brake pad warning light) when your pads are too worn. Basically, the sensor connects in the brake pad and comes in contact with the rotor when the minimum thickness of the pad has been reached. For more about sensor wires and how they work with your brake system, check out this video:</p>
+<p>&nbsp;</p>
+<p><iframe loading="lazy" src="https://www.youtube.com/embed/uqbJkz41-p4" allowfullscreen="allowfullscreen" width="560" height="315" frameborder="0"></iframe></p>
+<p>&nbsp;</p>
+<h4>Found your brake pads to be too worn? It’s time to replace them.</h4>
+<p>Letting the mechanic put any old off-the-shelf parts on your car shouldn’t be the first option, though. You want long-lasting confidence in your brake system, and not all brakes are made equal. Because of this, more and more people are researching, reading reviews, and watching video to find the best replacement upgrade. Fortunately, it’s easier than ever to be in control.</p>
+<p>Using PowerStop’s <a href="https://www.powerstop.com"><strong>Brake Finder</strong></a>, all you need to do is type in your vehicle and a list of brake kits that perfectly fit your vehicle will show up. Choose a kit that matches your driving style, and bam, you’ve got yourself upgraded brakes at an affordable price. All our brake kits come with everything you need – no extra trips to the parts store needed.</p>
+<p>Don’t want to install them yourself? No worries. Some customers may prefer to DIY install their new brake themselves, but there’s an easier way. Just bring the kit to your trusted mechanic, and they can install it for you. You get the confidence of knowing quality parts are on your vehicle, without having to do the dirty work. Now that’s smart.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>To find the right brake kit for your vehicle:&nbsp;<a href="https://www.powerstop.com">www.powerstop.com</a></p>
+<p>PowerStop brake kit installation videos: <a href="https://www.youtube.com/playlist?list=PLytxbQkMXJ3tt-9lYyg1v1_EobSU0TSBP">Installation Videos</a></p>
+<p>More PowerStop video content:&nbsp;<a href="https://www.youtube.com/user/PowerstopMedia/">www.youtube.com/user/PowerstopMedia/</a></p>
+<p>For more helpful Tips and How To:&nbsp;<a href="https://www.powerstop.com/info/how-tos/">www.powerstop.com/info/how-tos/</a></p>
+<p>Remember, Don’t Just Stop…<strong>PowerStop</strong>!<br />
+<a data-pin-do="buttonBookmark" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/"></a><br />
+<script async="" defer="" src="//assets.pinterest.com/js/pinit.js"></script></p>
+<div id="pixlee_container"></div>
+<p><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'zs52HuElb7XCjoUnxoyp'});Pixlee.addSimpleWidget({widgetId:3852781});};</script><script src="https://assets.pxlecdn.com/assets/pixlee_widget_1_0_0.js"></script></p>
+	        
+
+        </div> 
+      </div>
+  </div>
+
+	 
+
+		</main> 
+ 
+
+	  
+	  
+	  
+
+<div id="decide">
+	<div class="container text-center">
+	<a href="/support-installs/"><span>Have a question?</span> Check out our FAQs and How-Tos</a>		
+	</div>
+</div>
+
+<footer id="footer" class="footer pt-5">
+  <div class="container">
+    <div class="row" id="footer-accordion">
+      <h3 class="footer-heading mobile-view">Products<img src="/wp-content/themes/powerstop/assets/icons/plus.svg" /></h3>
+      <div class="col-2">
+        <div class="h5-headline desktop-view">Products</div>
+        <ul class="footer_nav mb-0">
+          <li><a href="/products/">Brake Finder</a></li>
+          <li><a href="/products/">PowerStop Products</a></li>
+                   <li class="phswitch"><a href="/where-to-buy/">Where to Buy</a></li>
+        </ul>
+      </div>
+
+      <h3 class="footer-heading mobile-view">Support<img src="/wp-content/themes/powerstop/assets/icons/plus.svg" /></h3>
+      <div class="col-2">
+        <div class="h5-headline desktop-view">Support</div>
+        <ul class="footer_nav mb-0">
+          <li><a href="/support-installs/">Support & Installs</a></li>
+          <li><a href="/category/faqs/">FAQs</a></li>
+          <li><a href="/warranty/">Warranty & Returns</a></li>
+                    <li><a target="_blank" class="caliper_pdf_download" href="https://www.powerstop.com/corereturn/">Caliper Core Refund</a></li> 
+          
+        </ul>
+      </div>
+
+      <h3 class="footer-heading mobile-view">Company Info<img src="/wp-content/themes/powerstop/assets/icons/plus.svg" /></h3>
+      <div class="col-4">
+        <div class="h5-headline desktop-view">Company Info</div>
+        <ul class="footer_nav mb-0">
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="https://recruiting.paylocity.com/recruiting/jobs/List/3679/Power-Stop-LLC/" target="_blank">Careers</a></li>
+          <li><a href="/category/media-events/">Videos & Events</a></li>
+          <li><a href="/category/press/">Press</a></li>
+          <li><a href="/find-local-installer/">Installer Hub</a></li>
+        </ul>
+      </div>
+
+      <h3 class="footer-heading mobile-view">Contact Us<img src="/wp-content/themes/powerstop/assets/icons/plus.svg" /></h3>
+      <div class="col-4">
+        <div class="footer_contact">
+          <ul>
+            <li><a href="tel:8888634415"><span class="phone">Call Us (888) 863-4415</span><span class="hours">8am - 5pm Mon-Fri (CST)</span></a></li>
+            <li><a href="/cdn-cgi/l/email-protection#ffbc8a8c8b90929a8dac9a8d89969c9abfaf90889a8dac8b908fd19c9092"><span class="phone">Email Customer Service</span><span class="hours">General Product Questions</span></a></li>
+            <li><a href="/cdn-cgi/l/email-protection#f2a697919ab2a29d859780a1869d82dc919d9f"><span class="phone">Email Tech Support</span><span class="hours">Technical & Installation Questions</span></a></li>
+          </ul>
+          <div class="footer_socials desktop-view"><a target="_blank" href="https://www.facebook.com/pages/Power-Stop/134531623226812"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/facebook.svg" alt="Facebook" width="32" height="32" /></a> <a target="_blank"  href="https://www.instagram.com/powerstopbrakes"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/instagram.svg" alt="instagram" width="32" height="32" /></a> <a target="_blank"  href="http://www.youtube.com/user/PowerstopMedia?feature=watch"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/youtube.svg" alt="YouTube" width="32" height="32" /></a><a  target="_blank" href="https://twitter.com/PowerStopBrakes"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/twitter.svg" alt="Twitter" width="32" height="32" /></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer_socials mobile-view"><a target="_blank"  href="https://www.facebook.com/pages/Power-Stop/134531623226812"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/facebook.svg" alt="Facebook" width="32" height="32" /></a> <a target="_blank"  href="https://www.instagram.com/powerstopbrakes"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/instagram.svg" alt="instagram" width="32" height="32" /></a> <a target="_blank"  href="http://www.youtube.com/user/PowerstopMedia?feature=watch"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/youtube.svg" alt="YouTube" width="32" height="32" /></a><a target="_blank"  href="https://twitter.com/PowerStopBrakes"><img class="social_icon" src="https://www.powerstop.com/wp-content/themes/powerstop/assets/images/twitter.svg" alt="Twitter" width="32" height="32" /></a></div>
+
+  <div class="container py-4">
+    <ul class="copyright">
+      <li><a href="https://www.powerstop.com">&copy; 2021 PowerStop LLC</a></li>
+      <li><a href="/privacy-policy/">Privacy</a></li>
+  
+    
+    </ul>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div class="modal fade" id="hubInterceptModal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="hubInterceptModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" aria-label="Close" onclick="setConsumerType('consumer');">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="pro-hub-modal-header">POWERSTOP <span>PRO HUB</span></div>
+        <div class="pro-hub-intro">This is for PowerStop Distributors & Professional Installers.</div>
+        <a href="javascript:" class="black_button pro_hub_button" onclick="setConsumerType('pro');">ENTER PRO SITE</a>
+        <a href="javascript:" class="white_button pro_hub_button" onclick="setConsumerType('consumer');">SWITCH TO CONSUMER SITE</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='text/javascript' src='https://www.powerstop.com/wp-content/themes/powerstop/vendor/jquery/ui/jquery-ui.min.js?ver=5.8.2' id='jquery-ui-js'></script>
+<script type='text/javascript' src='https://www.powerstop.com/wp-content/themes/powerstop/js/powerstop.js?ver=7.73' id='powerstop-js'></script>
+<script type='text/javascript' src='https://www.powerstop.com/wp-content/themes/powerstop/vendor/bootstrap/js/bootstrap.bundle.min.js?ver=5.8.2' id='bootstrap-js-js'></script>
+<script type='text/javascript' src='https://www.powerstop.com/wp-content/themes/powerstop/vendor/slick/slick.js?ver=5.8.2' id='slick-js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+<script type="text/javascript">
+
+jQuery( document ).ready(function() {
+	 
+
+  jQuery(".gallery-icon  a").attr("data-caption", function() {
+        return jQuery(this).find('img').attr("alt");
+  });
+  jQuery(".gallery-icon a").attr('data-fancybox', 'gallery');
+  jQuery('[data-fancybox="gallery"]').fancybox({
+  	 buttons : ['share', 'close', 'download']
+  });
+ 
+
+});
+
+	</script>
+
+</body>
+</html>

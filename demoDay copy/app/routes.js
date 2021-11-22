@@ -239,7 +239,7 @@ module.exports = function (app, passport, db) {
 
   app.post('/comments', (req, res) => {
     console.log(req.body)
-    db.collection('comments').insertOne({ what: req.body.comments, when: req.body.when, where: req.body.where, amount: req.body.paid }, (err, result) => {
+    db.collection('comments').insertOne({ what: req.body.comments, when: req.body.when, where: req.body.where, amount: req.body.amount }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
       res.redirect('/profile')
@@ -278,7 +278,7 @@ module.exports = function (app, passport, db) {
 
   app.post('/createTopic', (req, res) => {
     console.log(req.body)
-    db.collection('topic').insertOne({ topic: req.body.topic, when: new Date(), description: req.body.description,response:[],createdBy:req.user._id }, (err, result) => {
+    db.collection('topic').insertOne({ topic: req.body.topic, description: req.body.description,response:[] }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
       res.redirect('/')
@@ -291,7 +291,7 @@ module.exports = function (app, passport, db) {
       $push: {
         response: {
           when: new Date(), description: req.body.description,
-          createdBy:req.user._id
+  
 
         }
       }

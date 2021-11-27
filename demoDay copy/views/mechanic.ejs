@@ -24,18 +24,7 @@
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/main">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="/resources" class="nav-link">Must Have's</a>
-              </li>
-              <li class="nav-item">
-                <a href="/maintenance" class="nav-link">How To's</a>
-              </li>
-              <li class="nav-item">
-                <a href ="lights" class="nav-link">Why did a light on the dashboard appear?</a>
-              </li>
-              <li class="nav-item">
-                <a href ="/profile" class="nav-link" >Maintenance Log</a>
+                <a class="nav-link active" aria-current="page" href="/login">Log Out</a>
               </li>
             </ul>
           </section>
@@ -46,9 +35,9 @@
           <section class ="container">
               <section class="d-sm-flex align-items-center justify-content-between">
                   <section>
-                      <h2>Educate Yourself</h2>
+                      <h2>Helping Others One Question At A Time</h2>
                       <p class ="lead my-4">There is a estimated 1.4 billion cars on the road, but many do not have knowledge of basic car maintenance. Our community helps bridge that gap.</p>
-                      <button class="btn btn-primary btn-lg">Sign Up</button>
+                      
                     </section>
                   <img class ="img-fluid w-50 d-none d-sm-block" src="MainPic.svg" alt="MainPic">
               </section>
@@ -58,7 +47,7 @@
       
           <ul class="topics textArea">
 
-            <h3 class="textArea">Topics</h3>
+            <h3 class="textArea">Questions</h3>
             
             
           <% for(var i=0; i<topics.length; i++) {%>
@@ -78,7 +67,7 @@
                   <span><%= responses[j].description %></span>
                   <% } %>
                   <section class="hidden">
-              <form action="createResponse" method="POST">
+              <form action="mechanicResponse" method="POST">
                 <input class="topicTarget" type="hidden" name="topicId" placeholder="Response" value="<%= topics[i]._id %>"></input>
                 <!-- <input type="text" name="response" placeholder="Your Response">Response</input> -->
                 <textarea name ="description"></textarea><br>
@@ -93,17 +82,6 @@
           <% } %>
           </ul>
 
-
-<section class="textArea">
-        
-      <form action="createTopic" class="responseForm" method="POST">
-        <h2>Create A New Topic</h2>
-        <input id="topic" type="text" name="topic" placeholder="Topic Name"></input><br>
-        <textarea name ="description"></textarea><br>
-        <button type="submit">Create Topic</button>
-
-      </form>
-    </section>
 
 
 

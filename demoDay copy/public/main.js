@@ -1,45 +1,33 @@
-let heart = document.getElementsByClassName("fa-heart");
+
 let trash = document.getElementsByClassName("fa-trash");
 
-Array.from(heart).forEach(function(element) {
-      element.addEventListener('click', function(){
-        const name = this.parentNode.parentNode.childNodes[1].innerText
-        const quote = this.parentNode.parentNode.childNodes[3].innerText
-        const heart = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
-        
-        fetch('messages', {
-          method: 'put',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            'quote': quote,
-            'heart':heart
-          })
-        })
-        .then(response => {
-          if (response.ok) return response.json()
-        })
-        .then(data => {
-          console.log(data)
-          window.location.reload(true)
-        })
-      });
-});
 
-Array.from(trash).forEach(function(element) {
-      element.addEventListener('click', function(){
-        const name = this.parentNode.parentNode.childNodes[1].innerText
-        const quote = this.parentNode.parentNode.childNodes[3].innerText
-        fetch('messages', {
-          method: 'delete',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
+Array.from(trash).forEach(function (element) {
+  
+  let topicTarget = JSON.parse(JSON.stringify(element.dataset)).topicId 
+  console.log(topicTarget)
+  element.addEventListener('click', function () {
+    fetch('deleteTopic', {
+      method: 'delete',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
 
-            'quote': quote
-          })
-        }).then(function (response) {
-          window.location.reload()
-        })
+        topicTarget: topicTarget
+
+
+      })
+
+
+    })
+      .then((response) => {
+        console.log('response=' + response)
+        if (response.ok) return response.text();
+      })
+      .then((text) => {
+        console.log('text=' + text)
+        window.location.reload(true);
       });
+  });
 });

@@ -19,7 +19,7 @@
           <section class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link active" aria-current="page" href="/main">Home</a>
               </li>
               <li class="nav-item">
                 <a href="/resources" class="nav-link">Must Have's</a>
@@ -31,7 +31,7 @@
                 <a href ="lights" class="nav-link">Why did a light on the dashboard appear?</a>
               </li>
               <li class="nav-item">
-                <a href ="/login" class="nav-link" >Login</a>
+                <a href ="/profile" class="nav-link" >Maintenance Log</a>
               </li>
             </ul>
           </section>
@@ -53,6 +53,15 @@
       </div>
 
 <h2>Maintenance Log</h2>
+
+<% for(var i=0; i<maintenance.length; i++) 
+{%>
+  <li class="maintenance">
+    <span> <%= maintenance[i].what %></span>
+    <span> <%= maintenance[i].where %></span>
+    <span> <%= maintenance[i].when %></span>
+    <span> <%= maintenance[i].amount %></span>
+    <% } %>
 
 
     

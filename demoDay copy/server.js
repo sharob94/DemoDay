@@ -1,4 +1,6 @@
 // server.js
+require('dotenv').config()
+
 console.log('goodbye')
 // set up ======================================================================
 // get all the tools we need

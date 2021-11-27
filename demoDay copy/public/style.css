@@ -1,6 +1,6 @@
 body{
-    background-color: black;
-    color:black;
+    background-color:rgb(39,42,45);
+    color:rgb(39,42,45);
 }
 h1{
     background-color:rgb(39,42,45);
@@ -62,15 +62,55 @@ h2{
     color:rgb(202,83,143);
 }
 
-.textArea{
-    
-    width:45%;
-    margin-left: 2%;
-    
-
-}
 .hidden{
    
     width:45%;
 }
 
+
+
+.test{
+    width:25%;
+    float:left;
+    height:360px;
+    overflow: scroll;
+    margin:auto;
+    border-radius:8;
+    margin:3%;
+    padding:10px;
+    box-shadow: 5px 7px 2px rgb(207, 57, 162);
+    border: 3px solid rgb(255, 106, 210);
+    background-color:rgb(255, 133, 225);
+}
+
+.responseForm{
+    border:2px solid black;
+    box-shadow: 10px 15px 1px rgba(70, 70, 70, 0.747);
+    width:22%;
+    margin:auto;
+    height:250px;
+    clear:both;
+    padding:1%;
+    background-color: white;
+}
+
+.textArea{
+    background-color:rgb(39,42,45);
+
+}
+
+body, body .textArea{
+    background-color:rgb(39,42,45);
+}
+#bootstrap-overrides body{
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);  
+    text-align: var(--bs-body-text-align);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    color: var(--bs-body-color);
+
+}

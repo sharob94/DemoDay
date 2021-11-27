@@ -28,12 +28,14 @@ var userSchema = mongoose.Schema({
         name         : String
     },
     firstName: String,
+    cellNumber: String,
     year:String,
     make:String,
     model:String,
     miles:Number,
     date:Date,
-    lastOilChange:Number
+    lastOilChange:Number,
+    mechanic:Boolean,
     
 
 });

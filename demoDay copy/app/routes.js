@@ -10,25 +10,62 @@ module.exports = function (app, passport, db) {
 
 
   // normal routes ===============================================================
-
+console.log('before get route')
   // show the home page (will also have our login links)
-
+  app.get('/', function (req, res) {
+    res.render('login.ejs');
+  });
 
   console.log('routes.js here')
 
-  app.get('/', function (req, res) {
-    db.collection('comments').find().toArray((err, comments) => {
-      if (err) return console.log(err)
-      db.collection('topic').find().toArray((err, topics) => {
+  app.get('/main', function (req, res) {
+    console.log('trying to load')
+    if (req.user.mechanic) {
+      console.log('main mechanic')
+      db.collection('topic').aggregate([
+        {
+          $addFields: {
+            numberOfAnswers: {
+              $size: "$response"
+            }
+          }
+        },
+        {
+          $sort: {
+            numberOfAnswers: 1
+          }
+        }
+      ])
+
+        .toArray((err, topics) => {
+          if (err) return console.log(err)
+          console.log('TOPICS!!!!', topics)
+          res.render('mechanic.ejs', {
+            user: req.user,
+            topics: topics
+
+          })
+
+        })
+
+
+
+    } else {
+      console.log('main user')
+      db.collection('comments').find().toArray((err, comments) => {
         if (err) return console.log(err)
-        console.log('TOPICS!!!!',topics)
-        res.render('index.ejs', {
-          user: req.user,
-          comments: comments,
-          topics: topics
+        db.collection('topic').find().toArray((err, topics) => {
+          if (err) return console.log(err)
+          console.log('TOPICS!!!!', topics)
+          res.render('index.ejs', {
+            user: req.user,
+            topics: topics
+
+          })
+
         })
       })
-    })
+    }
 
   });
 
@@ -79,11 +116,11 @@ module.exports = function (app, passport, db) {
     })
   });
   app.get('/profile', function (req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+    db.collection('maintenance').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('profile.ejs', {
         user: req.user,
-        messages: result
+        maintenance: result
       })
     })
   });
@@ -131,50 +168,50 @@ module.exports = function (app, passport, db) {
 
   // message board routes ===============================================================
 
-  app.post('/messages', (req, res) => {
-    db.collection('messages').save({ name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown: 0 }, (err, result) => {
-      if (err) return console.log(err)
-      console.log('saved to database')
-      res.redirect('/profile')
-    })
-  })
+  // app.post('/messages', (req, res) => {
+  //   db.collection('messages').save({ name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown: 0 }, (err, result) => {
+  //     if (err) return console.log(err)
+  //     console.log('saved to database')
+  //     res.redirect('/profile')
+  //   })
+  // })
 
-  app.put('/upVote', (req, res) => {
-    db.collection('messages')
-      .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
-        $set: {
-          thumbUp: req.body.thumbUp + 1
-        }
-      }, {
-        sort: { _id: -1 },
-        upsert: true
-      }, (err, result) => {
-        if (err) return res.send(err)
-        res.send(result)
-      })
-  })
+  // app.put('/upVote', (req, res) => {
+  //   db.collection('messages')
+  //     .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
+  //       $set: {
+  //         thumbUp: req.body.thumbUp + 1
+  //       }
+  //     }, {
+  //       sort: { _id: -1 },
+  //       upsert: true
+  //     }, (err, result) => {
+  //       if (err) return res.send(err)
+  //       res.send(result)
+  //     })
+  // })
 
-  app.put('/downVote', (req, res) => {
-    db.collection('messages')
-      .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
-        $set: {
-          thumbUp: req.body.thumbDown - 1
-        }
-      }, {
-        sort: { _id: -1 },
-        upsert: true
-      }, (err, result) => {
-        if (err) return res.send(err)
-        res.send(result)
-      })
-  })
+  // app.put('/downVote', (req, res) => {
+  //   db.collection('messages')
+  //     .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
+  //       $set: {
+  //         thumbUp: req.body.thumbDown - 1
+  //       }
+  //     }, {
+  //       sort: { _id: -1 },
+  //       upsert: true
+  //     }, (err, result) => {
+  //       if (err) return res.send(err)
+  //       res.send(result)
+  //     })
+  // })
 
-  app.delete('/messages', (req, res) => {
-    db.collection('messages').findOneAndDelete({ name: req.body.name, msg: req.body.msg }, (err, result) => {
-      if (err) return res.send(500, err)
-      res.send('Message deleted!')
-    })
-  })
+  // app.delete('/messages', (req, res) => {
+  //   db.collection('messages').findOneAndDelete({ name: req.body.name, msg: req.body.msg }, (err, result) => {
+  //     if (err) return res.send(500, err)
+  //     res.send('Message deleted!')
+  //   })
+  // })
 
   // =============================================================================
   // AUTHENTICATE (FIRST LOGIN) ==================================================
@@ -186,30 +223,79 @@ module.exports = function (app, passport, db) {
   app.get('/login', function (req, res) {
     res.render('login.ejs', { message: req.flash('loginMessage') });
   });
+  // app.get('/index', function (req, res) {
+  //   res.render('index.ejs', { message: req.flash('loginMessage') });
+  // });
 
   // process the login form
   app.post('/login', passport.authenticate('local-login', {
-    successRedirect: '/profile', // redirect to the secure profile section
+
+    successRedirect: '/main', // redirect to the secure profile section
     failureRedirect: '/login', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
   }));
+
 
   // SIGNUP =================================
   // show the signup form
   app.get('/signup', function (req, res) {
     res.render('signup.ejs', { message: req.flash('signupMessage') });
   });
+  app.get('/mechanicSignUp', function (req, res) {
+    res.render('mechanicSignUp.ejs', { message: req.flash('signupMessage') });
+  });
 
   // process the signup form
   app.post('/signup', passport.authenticate('local-signup',
     {
-      // successRedirect : '/profile', // redirect to the secure profile section
+      //  successRedirect : '/main', // redirect to the secure profile section
       failureRedirect: '/signup', // redirect back to the signup page if there is an error
       failureFlash: true // allow flash messages
     }),
     function (req, res) {
-      console.log("Need to do findOneAndUpdate with ectra fields ", req.body, req.user._id)
-      res.redirect("/profile")
+      console.log('sign Up Hit')
+      db.collection('users').findOneAndUpdate({ _id: req.user._id }, {
+
+        $set: {
+          firstName: req.body.firstName,
+          cellNumber: req.body.cellNumber,
+          mechanic: req.body.mechanic
+
+
+
+        }
+      }
+        , (err, result) => {
+          if (err) return console.log(err)
+          console.log('saved to database')
+          res.redirect('/main')
+        })
+    });
+  app.post('/mechanicsignup', passport.authenticate('local-signup',
+    {
+      //  successRedirect : '/main', // redirect to the secure profile section
+      failureRedirect: '/mechanicsignup', // redirect back to the signup page if there is an error 
+      failureFlash: true // allow flash messages
+    }),
+    function (req, res) {
+      console.log(req.body)
+      db.collection('users').findOneAndUpdate({ _id: req.user._id }, {
+
+        $set: {
+          firstName: req.body.firstName,
+          cellNumber: req.body.cellNumber,
+          mechanic: req.body.mechanic
+
+
+
+
+        }
+      }
+        , (err, result) => {
+          if (err) return console.log(err)
+          console.log('saved to database')
+          res.redirect('/main')
+        })
     });
 
 
@@ -239,7 +325,7 @@ module.exports = function (app, passport, db) {
 
   app.post('/comments', (req, res) => {
     console.log(req.body)
-    db.collection('comments').insertOne({ what: req.body.comments, when: req.body.when, where: req.body.where, amount: req.body.amount }, (err, result) => {
+    db.collection('maintenance').insertOne({ what: req.body.comments, when: req.body.when, where: req.body.where, amount: req.body.paid }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
       res.redirect('/profile')
@@ -247,15 +333,15 @@ module.exports = function (app, passport, db) {
   })
   app.get('/search', (req, res) => {
     console.log(req.query.search)
-    db.collection('comments').find({ "quote": { $regex: req.query.search, $options: 'i' } }).toArray((err, result) => {
+    db.collection('maintenance').find({ "what": { $regex: req.query.search, $options: 'i' } }).toArray((err, result) => {
       if (err) return console.log(err)
-      res.render('profile.ejs', { comments: result })
+      res.render('profile.ejs', { maintenance: result })
     })
   })
 
-  app.put('/messages', (req, res) => {
-    db.collection('comments')
-      .findOneAndUpdate({ comments: req.body.comments }, {
+  app.put('/createTopic', (req, res) => {
+    db.collection('topic')
+      .findOneAndUpdate({ topic: req.body.topic, description: req.body.description }, {
         $inc: {
           heart: 1,
         }
@@ -268,37 +354,83 @@ module.exports = function (app, passport, db) {
       })
   })
 
-  app.delete('/messages', (req, res) => {
-    db.collection('comments').findOneAndDelete({ heart: req.body.heart, comments: req.body.comments }, (err, result) => {
+  app.delete('/deleteTopic', (req, res) => {
+    console.log("please Work")
+    console.log(req.body, "trying to delete")
+
+
+    db.collection('topic').findOneAndDelete({ _id: ObjectID(req.body.topicTarget) }, (err, result) => {
       if (err) return res.send(500, err)
       res.send('Message deleted!')
+      console.log(result)
     })
+
   })
 
 
   app.post('/createTopic', (req, res) => {
     console.log(req.body)
-    db.collection('topic').insertOne({ topic: req.body.topic, description: req.body.description,response:[] }, (err, result) => {
+    console.log(req.user)
+    db.collection('topic').insertOne({ topic: req.body.topic, description: req.body.description, response: [], postedBy: req.user._id }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
-      res.redirect('/')
+      res.redirect('/main')
     })
   })
   app.post('/createResponse', (req, res) => {
-    console.log("CREATE RESPONSE",req.body)
-    db.collection('topic').findOneAndUpdate({ _id: ObjectID(req.body.topicId )}, {
+    console.log("CREATE RESPONSE", req.body)
+    db.collection('topic').findOneAndUpdate({ _id: ObjectID(req.body.topicId) }, {
 
       $push: {
         response: {
           when: new Date(), description: req.body.description,
-  
+
 
         }
       }
     }, (err, result) => {
+
+      db.collection('users').findOne({ _id: result.value.postedBy }, (err, postedByUser) => {
+
+        if (err) return console.log(err)
+
+        sendText(postedByUser.cellNumber, "Log In To See A Response To Your Question " + result.value.topic)
+
+
+      })
+
       if (err) return console.log(err)
+      console.log(result.value.postedBy)
       console.log('saved to database')
-      res.redirect('/')
+      res.redirect('main')
+    })
+  })
+  app.post('/mechanicResponse', (req, res) => {
+    console.log("CREATE RESPONSE", req.body)
+    db.collection('topic').findOneAndUpdate({ _id: ObjectID(req.body.topicId) }, {
+
+      $push: {
+        response: {
+          when: new Date(), description: req.body.description,
+
+
+        }
+      }
+    }, (err, result) => {
+
+      db.collection('users').findOne({ _id: result.value.postedBy }, (err, postedByUser) => {
+
+        if (err) return console.log(err)
+
+        sendText(postedByUser.cellNumber, "Log In To See A Response To Your Question " + result.value.topic)
+
+
+      })
+
+      if (err) return console.log(err)
+      console.log(result.value.postedBy)
+      console.log('saved to database')
+      res.redirect('main')
     })
   })
 
@@ -309,3 +441,27 @@ module.exports = function (app, passport, db) {
 
 
 
+
+
+
+
+function sendText(toNum, textMessage) {
+
+  // Twilio Credentials
+  // To set up environmental variables, see http://twil.io/secure
+  const accountSid = process.env.TWILIO_ACCOUNT_SID;
+  const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+  // require the Twilio module and create a REST client
+  const client = require('twilio')(accountSid, authToken);
+
+  client.messages
+    .create({
+      to: toNum,
+      from: '+15707752857',
+      body: textMessage,
+    })
+    .then(message => console.log(message.sid));
+}
+
+// sendText('+12676011012','did it work')
